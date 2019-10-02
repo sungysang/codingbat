@@ -33,6 +33,7 @@ public class String1 {
     
     public static String extraEnd(String str) {
         String toReturn = "";
+        String test = "test";
         if (str.length() <= 2) {
             toReturn = str;
         } else {
