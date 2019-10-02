@@ -41,4 +41,14 @@ public class String1 {
         }
         return toReturn + toReturn + toReturn;
     }
+    
+    public static String firstTwo(String str) {
+        String toReturn = "";
+        if (str.length() <= 2) {
+            toReturn = str;
+        } else {
+            toReturn = str.substring(0, 2);
+        }
+        return toReturn;
+    }
 }
