@@ -51,4 +51,12 @@ public class String1 {
         }
         return toReturn;
     }
+    
+    public static String firstHalf(String str) {
+        return str.substring(0, (str.length()/2));
+    }
+    
+    public static String withoutEnd(String str) {
+        return str.substring(1, str.length()-1);
+    }
 }
