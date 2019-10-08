@@ -38,4 +38,28 @@ public class Array1 {
         return (a[0] == b[0] || a[a.length-1] == b[b.length-1]);
     }
     
+    public static int sum3(int[] nums) {
+        return nums[0] + nums[1] + nums[2];
+    }
+    
+    public static int[] rotateLeft3(int[] nums) {
+        int[] rotated = {nums[1], nums[2], nums[0]};
+        return rotated;
+    }
+    
+    public static int[] reverse3(int[] nums) {
+        int[] reversed = {nums[2], nums[1], nums[0]};
+        return reversed;
+    }
+    
+    public static int[] maxEnd3(int[] nums) {
+        int largest;
+        if(nums[0] > nums[2]) {
+            largest = nums[0];
+        } else {
+            largest = nums[2];
+        }
+        int[] larger = {largest, largest, largest};
+        return larger;
+    }
 }
