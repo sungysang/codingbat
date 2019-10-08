@@ -29,4 +29,13 @@ public class Array1 {
         return false;
     }
     
+    public static int[] makePi() {
+        int[] pi = {3, 1, 4};
+        return pi;
+    }
+    
+    public static boolean commonEnd(int[] a, int[] b) {
+        return (a[0] == b[0] || a[a.length-1] == b[b.length-1]);
+    }
+    
 }
