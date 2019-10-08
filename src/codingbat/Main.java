@@ -19,6 +19,8 @@ public class Main {
         // TODO code application logic here
         System.out.println(Warmup1.backAround("Pretxz"));
         System.out.println(String1.firstHalf("He"));
+        System.out.println(Warmup1.or35(6));
+        System.out.println(Warmup1.front22("Pretz"));
 
 
     }

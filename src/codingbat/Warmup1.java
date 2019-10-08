@@ -24,4 +24,32 @@ public class Warmup1 {
         String last = String.valueOf(str.charAt(str.length()-1));
         return last + str + last;
     }
+    
+    public static boolean or35(int n) {
+        if(n%3 == 0 || n%5 == 0) {
+            return true;
+        }
+        return false;
+    }
+    
+    public static String front22(String str) {
+        String frontback = "";
+        if (str.length() >= 2) {
+            frontback = str.substring(0, 2);
+        } else {
+            frontback = str;
+        }
+        return frontback + str + frontback;
+    }
+    
+    public static boolean startHi(String str) {
+        if (str.length() < 2) {
+            return false;
+        }
+        return str.substring(0, 2).equals("hi");
+    }
+    
+    public static boolean icyHot(int temp1, int temp2) {
+        return ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0));
+    }
 }
