@@ -62,4 +62,31 @@ public class Array1 {
         int[] larger = {largest, largest, largest};
         return larger;
     }
+    
+    public static int sum2(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        return nums[0] + nums[1];
+    }
+    
+    public static int[] middleWay(int[] a, int[] b) {
+        int[] middle = {a[1], b[1]};
+        return middle;
+    }
+    
+    public static int[] makeEnds(int[] nums) {
+        int[] truncated = new int[2];
+        truncated[0] = nums[0];
+        if(nums.length == 1) {
+            truncated[1] = nums[0];
+        } else{
+            truncated[1] = nums[nums.length - 1];
+        }
+
+        return truncated;
+    }
 }
