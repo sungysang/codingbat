@@ -78,6 +78,10 @@ public class Array1 {
         return middle;
     }
     
+    public static boolean has23(int[] nums) {
+        return (nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3);
+    }
+    
     public static int[] makeEnds(int[] nums) {
         int[] truncated = new int[2];
         truncated[0] = nums[0];
