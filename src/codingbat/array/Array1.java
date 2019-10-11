@@ -93,4 +93,39 @@ public class Array1 {
 
         return truncated;
     }
+    
+    public static int start1(int[] a, int[] b) {
+        int count = 0;
+        if (a.length > 0) {
+            for (int i : a) {
+                if (i == 1) {
+                    count ++;
+                }
+            }
+        }
+        if (b.length > 0) {
+            for (int i : b) {
+                if (i == 1) {
+                    count ++;
+                }
+            }   
+        }
+        return count;
+    }
+    
+    public static int[] biggerTwo (int[] a, int[] b) {
+        int sumA = a[0] + a[1];
+        int sumB = b[0] + b[1];
+        if (sumA > sumB || sumA == sumB) {
+            return a;
+        }
+        return b;
+    }
+    
+    public static int[] makeMiddle (int[] nums) {
+        int[] middle = new int[2];
+        middle[0] = nums[nums.length / 2 - 1];
+        middle[1] = nums[nums.length / 2];
+        return middle;
+    }
 }
