@@ -128,4 +128,21 @@ public class Array1 {
         middle[1] = nums[nums.length / 2];
         return middle;
     }
+    
+    public static int[] plusTwo (int[] a, int[] b) {
+        int[] c = new int[4];
+        c[0] = a[0];
+        c[1] = a[1];
+        c[2] = b[0];
+        c[3] = b[1];
+        return c;
+    }
+    
+    public static int[] swapEnds (int[] nums) {
+        int first = nums[0];
+        int last = nums[nums.length - 1];
+        nums[0] = last;
+        nums[nums.length - 1] = first;
+        return nums;
+    }
 }
