@@ -17,10 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println(Warmup1.backAround("Pretxz"));
-        System.out.println(String1.firstHalf("He"));
-        System.out.println(Warmup1.or35(6));
-        System.out.println(Warmup1.front22("Pretz"));
+        System.out.println(Warmup1.hasTeen(1, 10, 16));
 
 
     }

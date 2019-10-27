@@ -56,4 +56,15 @@ public class Warmup1 {
     public boolean in1020(int a, int b) {
         return ((a >= 10 && a <= 20) || (b >= 10 && b <= 20));
     }
+    
+    public static boolean hasTeen (int a, int b, int c) {
+        if (checkRange(a) || checkRange(b) || checkRange(c)) {
+            return true;
+        }
+        return false;
+    }
+    
+    public static boolean checkRange (int a) {
+        return a >= 13 && a <= 19;
+    }
 }
