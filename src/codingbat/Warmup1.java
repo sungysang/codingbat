@@ -67,4 +67,31 @@ public class Warmup1 {
     public static boolean checkRange (int a) {
         return a >= 13 && a <= 19;
     }
+    
+    public static boolean loneTeen (int a, int b) {
+        if (checkRange(a) && checkRange(b)) {
+            return false;
+        }
+        return (checkRange(a) || checkRange(b));
+    }
+    
+    public static String delDel (String str) {
+        if (str.length() <= 3) {
+            return str;
+        }
+        if (str.substring(1, 4).equals("del")) {
+            return str.substring(0, 1) + str.substring(4);
+        }
+        return str;       
+    }
+    
+    public static boolean mixStart (String str) {
+        if (str.length() <= 2) {
+            return false;
+        }
+        if (str.substring(1, 3).equals("ix")) {
+            return true;
+        }
+        return false;
+    }
 }

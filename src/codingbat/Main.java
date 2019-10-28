@@ -18,6 +18,9 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println(Warmup1.hasTeen(1, 10, 16));
+        int remainder = 11 % 10;
+        System.out.println(Math.abs(10 - remainder));
+
 
 
     }

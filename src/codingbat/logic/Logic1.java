@@ -68,4 +68,47 @@ public class Logic1 {
         }
         return "7:00";
     }
+    
+    public static boolean love6 (int a, int b) {
+        if (a == 6 || b == 6) {
+            return true;
+        }
+        if (a + b == 6 || Math.abs(a - b) == 6) {
+            return true;
+        }
+        return false;
+    }
+    
+    public static boolean in1To10 (int n, boolean outsideMode) {
+        if (outsideMode == false && n >= 1 && n <= 10) {
+            return true;
+        }
+        if (outsideMode == true && (n <= 1 || n >= 10)) {
+            return true;
+        }
+        return false;
+    }
+    
+    public static boolean specialEleven (int n) {
+        return n % 11 == 0 || n % 11 == 1;
+    }
+    
+    public static boolean more20 (int n) {
+        return n % 20 == 1 || n % 20 == 2;
+    }
+    
+    public static boolean old35 (int n) {
+        if (n % 3 == 0 && n % 5 == 0) {
+            return false;
+        }
+        return n % 3 == 0 || n % 5 == 0;
+    }
+    
+    public static boolean less20 (int n) {
+        return n % 20 == 19 || n % 20 == 18;
+    }
+    
+    public static boolean nearTen (int num) {
+        return num % 10 == 1 || num % 10 == 2 || num % 10 == 9 || num % 10 == 8 || num % 10 == 0;
+    }
 }
