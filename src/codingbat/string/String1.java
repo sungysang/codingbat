@@ -110,4 +110,111 @@ public class String1 {
         }
         return str.substring(str.length() - 2).equals("ly");
     }
+    
+    public static String nTwice (String str, int n) {
+        String first = str.substring(0, n);
+        String last = str.substring(str.length() - n);
+        return first + last;
+    }
+    
+    public static String twoChar (String str, int index) {
+        if (str.length() - index < 2 || index < 0) {
+            return str.substring(0, 2);
+        }
+        return str.substring(index, index + 2);
+    }
+    
+    public static String middleThree (String str) {
+        int middleIndex = (int) Math.floor(str.length() / 2);
+        return str.substring(middleIndex - 1, middleIndex + 2);
+    }
+    
+    public static boolean hasBad (String str) {
+        if (str.length() < 3) {
+            return false;
+        }
+        if (str.substring(0, 3).equals("bad") || 
+                (str.length() > 3 && str.substring(1, 4).equals("bad"))) {
+            return true;
+        }
+        return false;
+    }
+    
+    public static String atFirst (String str) {
+        String toReturn = "";
+        if (str.length() >= 2) {
+            toReturn = str.substring(0, 2);
+        } else {
+            if (str.length() == 1) {
+                toReturn = str.substring(0, 1) + "@";
+            }
+            
+            if (str.length() == 0) {
+                toReturn = "@@";
+            }
+        }
+        return toReturn;
+    }
+    
+    public static String lastChars (String a, String b) {
+        String toReturn = "";
+        
+        if (a.length() == 0) {
+            toReturn += "@";
+        } else {
+            toReturn += a.charAt(0);
+        }
+        
+        if (b.length() == 0) {
+            toReturn += "@";
+        } else {
+            toReturn += b.charAt(b.length() - 1);
+        }
+        
+        return toReturn;
+    }
+    
+    public static String conCat (String a, String b) {
+        
+        String template = a + b;
+        String toReturn = "";
+        Character g1 = new Character('g');
+        
+        for (int i = 0; i < template.length(); i ++) {
+            if (i != template.length() - 1 && 
+                    template.charAt(i) != template.charAt(i + 1) || 
+                    template.charAt(i) == g1 ) {
+                toReturn += template.charAt(i);
+            }
+            if (i == template.length() - 1) {
+                toReturn += template.charAt(i);
+            }
+        }
+        
+        return toReturn;
+    }
+    
+    public static String conCat2(String a, String b) {
+        if (a.length() == 0) {
+            return b;
+        }
+        if (b.length() == 0) {
+            return a;
+        }
+        
+        boolean hasDoubleChar = a.substring(a.length() - 1).equals(b.substring(0, 1));
+        String template = "";
+        
+        for (int i = 0; i < a.length(); i ++) {
+            if (i == a.length() - 1) {
+                if (hasDoubleChar) {
+                } else {
+                    template += a.charAt(i);
+                }
+            } else {
+                template += a.charAt(i);
+            }
+        }
+        return template + b;
+    }
 }

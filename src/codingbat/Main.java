@@ -20,7 +20,8 @@ public class Main {
         System.out.println(Warmup1.hasTeen(1, 10, 16));
         int remainder = 11 % 10;
         System.out.println(Math.abs(10 - remainder));
-
+        
+        System.out.println(String1.conCat2("abc", "cat"));
 
 
     }
