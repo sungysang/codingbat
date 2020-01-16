@@ -57,4 +57,43 @@ public class Warmup2 {
         }
         return false;
     }
+
+    public static String stringBits (String str) {
+        String holder = "";
+
+        for (int i = 0; i < str.length(); i ++) {
+
+            if ( i % 2 == 0 ) {
+
+                holder += str.charAt(i);
+
+            }
+
+        }
+
+        return holder;
+    }
+
+    public static String stringSplosion (String str) {
+        String holder = "";
+
+        for (int i = 0; i < str.length(); i ++) {
+
+            for (int j = 0; j < i; j ++) {
+
+                holder += str.charAt(j);
+
+            }
+
+        }
+
+        for (int i = 0; i < str.length(); i ++) {
+
+            holder += str.charAt(i);
+
+        }
+
+        return holder;
+
+    }
 }

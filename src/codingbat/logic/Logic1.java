@@ -111,4 +111,30 @@ public class Logic1 {
     public static boolean nearTen (int num) {
         return num % 10 == 1 || num % 10 == 2 || num % 10 == 9 || num % 10 == 8 || num % 10 == 0;
     }
+
+    public static int teenSum (int a, int b) {
+        boolean luckyA = ( a >= 13 && a <= 19 );
+        boolean luckyB = ( b >= 13 && b <= 19 );
+
+        if ( luckyA || luckyB ) {
+            
+            return 19;
+
+        }
+
+        return a + b;
+    }
+
+    public static boolean answerCell (boolean isMorning, boolean isMom, boolean isAsleep) {
+        if (isAsleep) {
+            return false;
+        }
+        if (isMorning) {
+            if (isMom) {
+                return true;
+            }
+            return false;
+        }
+        return true;
+    }
 }
